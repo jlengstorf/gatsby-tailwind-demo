@@ -2,6 +2,8 @@
 
 This demo is a quick example of combining [Tailwind CSS](https://tailwindcss.com) with [Emotion](https://emotion.sh) in a [Gatsby](https://gatsbyjs.org) site.
 
+Check the inspector to see loaded CSS [in the demo](https://gatsby-tailwind-emotion.netlify.com/).
+
 ## Quickstart
 
 ```sh
@@ -26,6 +28,8 @@ This repo contains two distinct approaches: styled components and the `css()` fu
 
 ### Styled Components
 
+[**Live demo**](https://gatsby-tailwind-emotion.netlify.com/)
+
 With styled components, we can add Tailwind classes directly to a React component like so:
 
 ```jsx
@@ -45,6 +49,8 @@ To see the CSS approach in this demo, start the app with `yarn develop`, then na
 > **NOTE:** The Babel plugin will automatically process the `tw()` function, which means we don’t actually need to import it. ESLint will complain about this, however, so we need to add `tw` as a global variable.
 
 ### CSS Function
+
+[**Live Demo**](https://gatsby-tailwind-emotion.netlify.com/css)
 
 Using Emotion’s `css` function, we would do something like this:
 
