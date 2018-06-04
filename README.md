@@ -18,6 +18,9 @@ yarn
 yarn develop
 ```
 
+Make sure to use the right build command in your build settings e.g. if you use Netlify!
+Per default Netlify sets it to `gatsby build` but you have to use `yarn run build` to run postcss before building the Gatsby site.
+
 ## Why does this exist?
 
 CSS frameworks tend to generate large files, and it’s rare that a given page uses all of them. With CSS-in-JS solutions like Emotion, only the styles actually being used are attached to each component, which decreases the amount of style data sent for each page in a given app.
