@@ -1,3 +1,11 @@
 module.exports = {
-  plugins: ['gatsby-plugin-emotion']
-};
+	plugins: [
+		{
+			resolve: 'gatsby-plugin-postcss',
+			options: {
+				postCssPlugins: [require('tailwindcss')('./tailwind.config.js')]
+			}
+		},
+		'gatsby-plugin-emotion'
+	]
+}
