@@ -5,76 +5,61 @@
  */
 
 /* global tw */
-import React from 'react';
-import styled from 'react-emotion';
+import React from 'react'
+import styled from 'react-emotion'
 
 const Page = styled('div')`
-  ${tw('flex justify-center items-center absolute pin bg-grey-light')};
-`;
+	${tw`flex justify-center items-center absolute pin bg-grey-light`};
+`
 
 const Container = styled('div')`
-  ${tw(
-    'bg-white container my-8 mx-auto max-w-sm shadow-lg rounded-lg overflow-hidden font-sans'
-  )};
-`;
+	${tw`bg-white container my-8 mx-auto max-w-sm shadow-lg rounded-lg overflow-hidden font-sans`};
+`
 
 const Wrapper = styled('div')`
-  ${tw('sm:flex sm:items-center px-6 py-4')};
-`;
+	${tw`sm:flex sm:items-center px-6 py-4`};
+`
 
 const Avatar = styled('img')`
-  ${tw('block h-16 sm:h-24 rounded-full mx-auto mb-4 sm:mb-0 sm:mr-4 sm:ml-0')};
-`;
+	${tw`block h-16 sm:h-24 rounded-full mx-auto mb-4 sm:mb-0 sm:mr-4 sm:ml-0`};
+`
 
 const TextContainer = styled('div')`
-  ${tw('text-center sm:text-left sm:flex-grow')};
-`;
+	${tw`text-center sm:text-left sm:flex-grow`};
+`
 
 const TextSpacing = styled('div')`
-  ${tw('mb-4')};
-`;
+	${tw`mb-4`};
+`
 
 const Company = styled('p')`
-  ${tw('my-0 text-sm leading-tight text-grey-dark')};
-`;
+	${tw`my-0 text-sm leading-tight text-grey-dark`};
+`
 
 const Name = styled('h1')`
-  ${tw('my-0 text-xl leading-tight')};
-`;
+	${tw`my-0 text-xl leading-tight`};
+`
 
 const Button = styled('button')`
-  ${tw([
-    'bg-white',
-    'border-purple',
-    'border',
-    'font-semibold',
-    'hover:bg-purple',
-    'hover:text-white',
-    'leading-normal',
-    'px-4',
-    'py-1',
-    'rounded-full',
-    'text-purple',
-    'text-xs'
-  ])};
-`;
+	${tw`bg-white border-purple border font-semibold hover:bg-purple hover:text-white leading-normal px-4 py-1 rounded-full text-purple text-xs`};
+`
 
 export default () => (
-  <Page>
-    <Container>
-      <Wrapper>
-        <Avatar
-          src="https://lengstorf.com/images/jason-lengstorf.jpg"
-          alt="Jason Lengstorf"
-        />
-        <TextContainer>
-          <TextSpacing>
-            <Name>Jason Lengstorf</Name>
-            <Company>Developer at Gatsby</Company>
-          </TextSpacing>
-          <Button>High Five</Button>
-        </TextContainer>
-      </Wrapper>
-    </Container>
-  </Page>
-);
+	<Page>
+		<Container>
+			<Wrapper>
+				<Avatar
+					src="https://lengstorf.com/images/jason-lengstorf.jpg"
+					alt="Jason Lengstorf"
+				/>
+				<TextContainer>
+					<TextSpacing>
+						<Name>Jason Lengstorf</Name>
+						<Company>Developer at Gatsby</Company>
+					</TextSpacing>
+					<Button>High Five</Button>
+				</TextContainer>
+			</Wrapper>
+		</Container>
+	</Page>
+)

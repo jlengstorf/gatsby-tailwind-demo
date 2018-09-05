@@ -25,7 +25,7 @@ Per default Netlify sets it to `gatsby build` but you have to use `yarn run buil
 
 CSS frameworks tend to generate large files, and it’s rare that a given page uses all of them. With CSS-in-JS solutions like Emotion, only the styles actually being used are attached to each component, which decreases the amount of style data sent for each page in a given app.
 
-Thanks to [@andrewdelprete](https://github.com/andrewdelprete)’s work on [babel-plugin-tailwind](https://github.com/andrewdelprete/babel-plugin-tailwind), we can easily get the power of Tailwind without the stylesheet bloat by passing Tailwind classes into Emotion.
+Thanks to [@bradlc](https://github.com/bradlc)’s work on [babel-plugin-tailwind-components](https://github.com/bradlc/babel-plugin-tailwind-components), we can easily get the power of Tailwind without the stylesheet bloat by passing Tailwind classes into Emotion.
 
 This repo contains two distinct approaches: styled components and the `css()` function.
 
@@ -41,7 +41,7 @@ import React from 'react';
 import styled from 'react-emotion';
 
 const Heading = styled('h1')`
-  ${tw('my-0 text-xl leading-tight')};
+  ${tw`my-0 text-xl leading-tight`};
 `;
 
 export default () => <Heading>This is some text!</Heading>;
@@ -62,7 +62,7 @@ Using Emotion’s `css` function, we would do something like this:
 import React from 'react';
 import { css } from 'emotion';
 
-const heading = css(tw('my-0 text-xl leading-tight'));
+const heading = css(tw`my-0 text-xl leading-tight`);
 
 export default () => <h1 className={heading}>This is some text!</h1>;
 ```
