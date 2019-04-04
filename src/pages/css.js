@@ -1,17 +1,11 @@
-/*
- * NOTE: The Babel plugin will automatically process the `tw()` function, which
- * means we don’t actually need to import it. ESLint will complain about this,
- * however, so we need to add `tw` as a global variable.
- */
-
-/* global tw */
 import React from 'react'
 import { css } from 'emotion'
+import tw from 'tailwind.macro'
 
 const styles = {
-	page: css(tw`flex justify-center items-center absolute pin bg-grey-light`),
+	page: css(tw`flex justify-center items-center absolute inset-0 bg-gray-400`),
 	container: css(
-		tw`bg-white container my-8 mx-auto max-w-sm shadow-lg rounded-lg overflow-hidden font-sans`
+		tw`bg-white my-8 mx-auto max-w-sm shadow-lg rounded-lg overflow-hidden font-sans`
 	),
 	wrapper: css(tw`sm:flex sm:items-center px-6 py-4`),
 	avatar: css(
@@ -19,10 +13,10 @@ const styles = {
 	),
 	textContainer: css(tw`text-center sm:text-left sm:flex-grow`),
 	textSpacing: css(tw`mb-4`),
-	company: css(tw`my-0 text-sm leading-tight text-grey-dark`),
+	company: css(tw`my-0 text-sm leading-tight text-gray-600`),
 	name: css(tw`my-0 text-xl leading-tight`),
 	button: css(
-		tw`bg-white border-purple border font-semibold hover:bg-purple hover:text-white leading-normal px-4 py-1 rounded-full text-purple text-xs`
+		tw`bg-white border-purple-500 border font-semibold hover:bg-purple-500 hover:text-white leading-normal px-4 py-1 rounded-full text-purple-500 text-xs`
 	)
 }
 
